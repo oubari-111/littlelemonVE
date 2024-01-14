@@ -53,8 +53,8 @@ urlpatterns = [
 
 
 
-    path('', include('restaurant.urls')),
-    path('api/', include('restaurant.urls')),
+    #path('', include('restaurant.urls')),
+    #path('api/', include('restaurant.urls')),
     
 
 ]

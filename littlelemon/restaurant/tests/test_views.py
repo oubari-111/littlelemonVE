@@ -1,4 +1,5 @@
-
+from views import Menu
+from serializers import MenuSerializer
 #maybe wrong 
 class MenuViewTest(TestCase):
     def setup(self):

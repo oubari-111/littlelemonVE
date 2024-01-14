@@ -2,7 +2,7 @@ from django.urls import path, include
 from . import views
 from .views import MenuItem, bookingview
 
-app_name = 'restaurant'
+#app_name = 'restaurant'
 #router = routers.DefaultRouter()
 #router.register(r'users', views.UserViewSet)
 urlpatterns = [
