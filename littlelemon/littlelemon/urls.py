@@ -21,19 +21,40 @@ from restaurant import views
 from rest_framework.authtoken.views import obtain_auth_token
 
 
-
+# week 2: exercise: set up the table booking API ################
 router = DefaultRouter()
 router.register(r'tables', views.BookingViewSet)
-
+###########################################################
 
 urlpatterns = [
+
+    ########## Week 1: Exercise: Setting up the static routes #########
     path('admin/', admin.site.urls),
-    path('', include('restaurant.urls')),
+
     path('restaurant/', include('restaurant.urls')),
-    path('api/', include('restaurant.urls')),
+    ###########################################################
+
+    ##### week 2 exercise: setting up the Menu API #########
     path('restaurant/menu/',include('restaurant.urls')),
+    ###########################################################
+
+    ##### week 2: exercise: set up the table booking API ################
     path('restaurant/booking/', include(router.urls)),
+    ###########################################################
+
+    ##### week 3: exercise: add the registration page 
     path('auth/', include('djoser.urls')),
     path('auth/', include('djoser.urls.authtoken')),
+    ############################################
+
+    ##### week 3: exercose: securing the table booking API
     path('api-token-auth/', obtain_auth_token),
+    ############################################
+
+
+
+    path('', include('restaurant.urls')),
+    path('api/', include('restaurant.urls')),
+    
+
 ]
